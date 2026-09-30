@@ -9,3 +9,11 @@ for (int i=0; i < 5; i++)
 
 }
 //3. feladata
+
+double osszeg = 0;
+for (int i = 0; i < 5; i++)
+{
+    osszeg += lepesszamok[i];
+}
+//osszeg=lepesszamok.Sum();
+double átlag = osszeg/lepesszamok.Count;
