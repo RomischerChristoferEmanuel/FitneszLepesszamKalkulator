@@ -19,6 +19,19 @@ for (int i = 0; i < 5; i++)
 double atlag = osszeg/lepesszamok.Count;
 
 //4.feladat
-if (atlag >= 10000) Console.WriteLine("Kiváló forma, teljesítetted a célt!");
-else if (atlag >= 7000) Console.WriteLine("Átlagos aktivitás, jó úton jársz.");
-else Console.WriteLine("Kevés mozgás, több aktivitás szükséges!");
+string kiir = "";
+if (atlag >= 10000) kiir=("Kiváló forma, teljesítetted a célt!");
+else if (atlag >= 7000) kiir=("Átlagos aktivitás, jó úton jársz.");
+else kiir=("Kevés mozgás, több aktivitás szükséges!");
+
+//5.feladat
+Console.WriteLine("Adatok feldolgozása...\n========================================\nRögzített napi lépésszámok:");
+for(int i = 0; i <= lepesszamok.Count;i++)
+{
+    Console.WriteLine($"\t- {i+1}. nap: {lepesszamok[i]} lépés");
+}
+Console.WriteLine("----------------------------------------");
+Console.WriteLine($"Összes lépésszám: {osszeg} lépés");
+Console.WriteLine($"Napi átlagos lépészám: {atlag:0f} lépés");
+Console.WriteLine($"Heti értékelés: {kiir}");
+Console.WriteLine("========================================");
